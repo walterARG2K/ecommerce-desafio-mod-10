@@ -1,0 +1,22 @@
+*{
+    box-sizing: border-box;
+}
+:root {
+    --primary-color: #000;
+    --secondary-color:#fd611a;
+    --background-color:#ECE3C3;
+}
+
+body{
+    margin: 0;
+    font-family: Poppins;
+    background-color: var(--background-color);
+}
+
+ * {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+
+
+

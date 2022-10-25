@@ -1,0 +1,17 @@
+.auth-code {
+    width: 30px;
+    height: 30px;
+    font-size: 24px;
+    text-align: center;
+    font-family: "Poppins";
+
+}
+
+.auth-code:focus {
+    outline: #ffb30099 solid;
+}
+
+.container-auth-code {
+    display: flex;
+    gap: 10px
+}
