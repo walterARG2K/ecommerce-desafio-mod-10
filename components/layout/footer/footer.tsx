@@ -19,6 +19,10 @@ import {
 function Footer() {
     const router = useRouter();
 
+    function onClickIcon(socialLink: string) {
+        window.open("https://" + socialLink, "_blank");
+    }
+
     return (
         <FooterEl>
             <Container>
@@ -36,11 +40,21 @@ function Footer() {
                 <ContainerSocialsNetwork>
                     <LargeBoldWhiteText>Nuestras Redes</LargeBoldWhiteText>
                     <ContainerIcons>
-                        <LinkedinIcon />
-                        <GithubIcon />
-                        <FacebookIcon />
-                        <InstagramIcon />
-                        <TwitterIcon />
+                        <div onClick={() => onClickIcon("linkedin.com/in/walter-ortiz-87747124a/")}>
+                            <LinkedinIcon />
+                        </div>
+                        <div onClick={() => onClickIcon("github.com/walterARG2K")}>
+                            <GithubIcon />
+                        </div>
+                        <div onClick={() => onClickIcon("facebook.com")}>
+                            <FacebookIcon />
+                        </div>
+                        <div onClick={() => onClickIcon("instagram.com")}>
+                            <InstagramIcon />
+                        </div>
+                        <div onClick={() => onClickIcon("twitter.com")}>
+                            <TwitterIcon />
+                        </div>
                     </ContainerIcons>
                 </ContainerSocialsNetwork>
             </Container>

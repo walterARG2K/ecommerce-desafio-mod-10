@@ -4,6 +4,7 @@ import { useGetToken } from "lib/hooks";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { useEffect, useRef } from "react";
+import { Loader } from "ui/loader";
 
 export default function MyInfo() {
     const tokenData = useGetToken();
@@ -27,7 +28,7 @@ export default function MyInfo() {
                 ></meta>
             </Head>
             <Layout>
-                <MyProfile email={tokenData?.email as any} />
+                {!tokenData.token ? <Loader /> : <MyProfile email={tokenData?.email as any} />}
             </Layout>
         </div>
     );
