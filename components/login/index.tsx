@@ -1,4 +1,5 @@
 import { getToken, sendAuthCode } from "lib/api";
+import Image from "next/image";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import { ErrorMessage } from "ui/alert-messages";
@@ -38,7 +39,7 @@ function LoginUser() {
                 const response = await getToken(email, parseInt(code));
                 setAnim(false);
                 window.scrollTo(0, 0);
-                response ? router.push("/") : setErrorCode(true);
+                response ? router.push("/my-profile") : setErrorCode(true);
             }
         }
     }
@@ -50,7 +51,14 @@ function LoginUser() {
             ) : null}
             <ContainerCard>
                 <ContainerImg>
-                    <Img src="https://i.postimg.cc/YqKS9bxB/login.png" alt="" />
+                    <Img>
+                        <Image
+                            style={{ borderRadius: 10 }}
+                            src="https://i.postimg.cc/YqKS9bxB/login.png"
+                            alt=""
+                            layout="fill"
+                        />
+                    </Img>
                     <TinyText>Ingresá O creá una cuenta</TinyText>
                 </ContainerImg>
                 <Card>

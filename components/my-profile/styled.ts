@@ -110,8 +110,9 @@ export const ContainerOrders = styled.div`
 `;
 
 export const ContainerAllOrders = styled.div`
-    margin-bottom: 100px;
-    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    gap: 6vh;
 `;
 
 export const OrdersNotFound = styled.div`
@@ -162,4 +163,15 @@ export const ContainerQuantity = styled.div`
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
     padding-left: 40px;
+`;
+
+export const Img = styled.div`
+    width: 60px;
+    height: 60px;
+    position: relative;
+`;
+
+export const ContainerImg = styled.div`
+    background-color: white;
+    border-radius: 10px;
 `;

@@ -15,7 +15,7 @@ export const ContainerMain = styled.div`
 
 export const ContainerCard = styled.div`
     width: 100%;
-    max-width: 500px;
+    max-width: 300px;
     border-radius: 10px;
     background-color: #ecf0f1;
     box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.4);
@@ -23,11 +23,13 @@ export const ContainerCard = styled.div`
     @media (min-width: 600px) {
         display: flex;
         gap: 15px;
+        max-width: 500px;
     }
 `;
 
 export const ContainerImg = styled.div`
     width: 100%;
+    max-width: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -40,8 +42,11 @@ export const ContainerImg = styled.div`
     }
 `;
 
-export const Img = styled.img`
+export const Img = styled.div`
     width: 100%;
+    height: 100%;
+    min-height: 200px;
+    position: relative;
     border-radius: 10px;
 `;
 

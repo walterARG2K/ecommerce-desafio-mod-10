@@ -1,12 +1,15 @@
+import Image from "next/image";
 import { LoaderSecond } from "ui/loader";
 import { BodyWhiteText, LargeBoldText } from "ui/typography";
 import {
     ContainerAllOrders,
+    ContainerImg,
     ContainerOrderInfo,
     ContainerOrderName,
     ContainerOrders,
     ContainerOrderStatus,
     ContainerQuantity,
+    Img,
     OrderEl,
     OrderName,
     OrdersNotFound,
@@ -21,16 +24,17 @@ interface ordersType {
 interface orderType {
     name: string;
     quantity: number;
+    img: string;
 }
 
 function OrdersContainer({ ordersData }: any) {
     return (
-        <div>
+        <ContainerAllOrders>
             {!ordersData ? (
                 <LoaderSecond />
             ) : ordersData.length ? (
                 ordersData?.map((i: any, index: any) => (
-                    <ContainerAllOrders key={Math.random()}>
+                    <div key={Math.random()}>
                         <ContainerOrders>
                             <div>
                                 <AllOrders
@@ -40,14 +44,14 @@ function OrdersContainer({ ordersData }: any) {
                                 />
                             </div>
                         </ContainerOrders>
-                    </ContainerAllOrders>
+                    </div>
                 ))
             ) : (
                 <OrdersNotFound>
                     <LargeBoldText>Aún no haz comprado ningún producto</LargeBoldText>
                 </OrdersNotFound>
             )}
-        </div>
+        </ContainerAllOrders>
     );
 }
 
@@ -59,16 +63,26 @@ function AllOrders({ url, status, productInfo }: ordersType) {
                 <BodyWhiteText>Estado de la orden: {estado}</BodyWhiteText>
             </ContainerOrderStatus>
             {productInfo?.map((i: any) => (
-                <Order key={Math.random()} name={i[0].product.Name} quantity={i[0].quantity} />
+                <Order
+                    img={i[0].product.Images[0].thumbnails.full.url}
+                    key={Math.random()}
+                    name={i[0].product.Name}
+                    quantity={i[0].quantity}
+                />
             ))}
         </OrderEl>
     );
 }
 
-function Order({ name, quantity }: orderType) {
+function Order({ img, name, quantity }: orderType) {
     return (
         <div>
             <ContainerOrderInfo>
+                <ContainerImg>
+                    <Img>
+                        <Image src={img} layout="fill" />
+                    </Img>
+                </ContainerImg>
                 <ContainerOrderName />
                 <OrderName>
                     <BodyWhiteText>{name}</BodyWhiteText>
