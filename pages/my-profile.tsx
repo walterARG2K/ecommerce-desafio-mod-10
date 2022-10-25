@@ -28,7 +28,7 @@ export default function MyInfo() {
                 ></meta>
             </Head>
             <Layout>
-                {!tokenData.token ? <Loader /> : <MyProfile email={tokenData?.email as any} />}
+                {!tokenData?.token ? <Loader /> : <MyProfile email={tokenData?.email as any} />}
             </Layout>
         </div>
     );
