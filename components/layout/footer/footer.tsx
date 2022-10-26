@@ -14,6 +14,7 @@ import {
     ContainerIcons,
     ContainerSocialsNetwork,
     FooterEl,
+    Icon,
 } from "./styled-footer";
 
 function Footer() {
@@ -40,21 +41,21 @@ function Footer() {
                 <ContainerSocialsNetwork>
                     <LargeBoldWhiteText>Nuestras Redes</LargeBoldWhiteText>
                     <ContainerIcons>
-                        <div onClick={() => onClickIcon("linkedin.com/in/walter-ortiz-87747124a/")}>
+                        <Icon onClick={() => onClickIcon("linkedin.com/in/walter-ortiz-87747124a/")}>
                             <LinkedinIcon />
-                        </div>
-                        <div onClick={() => onClickIcon("github.com/walterARG2K")}>
+                        </Icon>
+                        <Icon onClick={() => onClickIcon("github.com/walterARG2K")}>
                             <GithubIcon />
-                        </div>
-                        <div onClick={() => onClickIcon("facebook.com")}>
+                        </Icon>
+                        <Icon onClick={() => onClickIcon("facebook.com")}>
                             <FacebookIcon />
-                        </div>
-                        <div onClick={() => onClickIcon("instagram.com")}>
+                        </Icon>
+                        <Icon onClick={() => onClickIcon("instagram.com")}>
                             <InstagramIcon />
-                        </div>
-                        <div onClick={() => onClickIcon("twitter.com")}>
+                        </Icon>
+                        <Icon onClick={() => onClickIcon("twitter.com")}>
                             <TwitterIcon />
-                        </div>
+                        </Icon>
                     </ContainerIcons>
                 </ContainerSocialsNetwork>
             </Container>

@@ -24,6 +24,7 @@ export const ContainerContactUs = styled.div`
     padding: 5px;
     margin-top: 10px;
     text-align: center;
+    cursor:pointer;
 `;
 
 export const ContainerSocialsNetwork = styled.div`
@@ -37,7 +38,7 @@ export const ContainerIcons = styled.div`
     display: flex;
     gap: 20px;
     margin-bottom: 50px;
-`;
+    `;
 
 export const ContainerCopyright = styled.div`
     width: 100%;
@@ -46,3 +47,7 @@ export const ContainerCopyright = styled.div`
         padding: 50px 30px 0;
     }
 `;
+
+export const Icon = styled.div`
+cursor:pointer;
+`

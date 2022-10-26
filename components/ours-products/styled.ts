@@ -27,6 +27,7 @@ export const FirstSection = styled.div`
     box-shadow: 1.5px 1.5px 2px rgba(0, 0, 0, 0.3);
     max-width: 800px;
     margin-bottom: 5px;
+    cursor:pointer;
 `;
 
 export const TextAboutSections = styled(FirstSection)`
@@ -48,6 +49,7 @@ export const SecondSection = styled.div`
     box-shadow: 1.5px 1.5px 2px rgba(0, 0, 0, 0.3);
     max-width: 400px;
     max-height: 200px;
+    cursor:pointer;
 `;
 
 export const Img = styled.img`
