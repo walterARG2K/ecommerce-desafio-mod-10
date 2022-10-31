@@ -31,6 +31,7 @@ export default function Home() {
     return (
         <div>
             <Head>
+                <meta name="google-site-verification" content="niSsQfOhcAopgyl2xHfRaAViv5_8QhXvoNQG0GoyCik" />
                 <title>TitanHardware</title>
                 <meta
                     name="description"
