@@ -49,7 +49,7 @@ function ProductsResults({ query }: Props) {
         if ((lastQuery !== query && pageColl.length) || !pages.length ) {
             setLastQuery(query);
             setPages(pageColl);
-        } else if(!productsData.results.length) setPages(pageColl);
+        } else if(!productsData?.results?.length) setPages(pageColl);
 
         
     }, [productsData]);
