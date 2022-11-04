@@ -33,7 +33,7 @@ function ProductsResults({ query }: Props) {
     const productsData = useGetProductBySearch(query, offset);
     const products = productsOrdered || productsData;
     const router = useRouter();
-
+    
     useEffect(() => {
         var offsetAux = 0;
         var pagination = 1;
@@ -45,11 +45,13 @@ function ProductsResults({ query }: Props) {
             pageColl.push(pagination++);
         }
         setProductsOrdered(null);
-
-        if ((lastQuery !== query && pageColl.length) || !pages.length) {
+        
+        if ((lastQuery !== query && pageColl.length) || !pages.length ) {
             setLastQuery(query);
             setPages(pageColl);
-        }
+        } else if(!productsData.results.length) setPages(pageColl);
+
+        
     }, [productsData]);
 
     return (
